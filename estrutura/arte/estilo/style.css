@@ -1,0 +1,249 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background: #ffff;
+    --destaque: #3a8acb;
+    --icones: #001858;
+    --letras: #0000;
+    --secundaria: #a6a6a6;
+    --botoes: #a47754;
+    --sombra: #00000085;
+    --fonte: "Montserrat", sans-serif;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte);
+}
+
+body {
+    background-color: var(--background);
+}
+
+header {
+    padding-inline: 16px;
+}
+
+.nav {
+    max-width: 1280px;
+    height: 20px;
+    font-size: 20px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    padding: 25px 20px;
+    background-color: var(--botoes);
+    margin-top: 20px;
+
+}
+
+
+.fa-house {
+    color: var(--background);
+}
+
+.menu-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.menu-list a {
+    font-size: 18px;
+    padding-block: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--background);
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    background: var(--background);
+    border-top: 3px solid var(--background);
+    cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--background);
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+section h1 {
+    display: block;
+    font-size: 50px;
+    margin-left: 7%;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 140px;
+    padding: 80px;
+}
+
+.container-arte {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    width: 45%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.imagem-arte img {
+    width: 272px;
+    height: 183px;
+    border: 15px groove var(--botoes);
+    box-shadow: 0px 2px 25px var(--sombra);
+}
+
+.texto-container {
+    padding: 10px;
+}
+
+.Detalhes-exibicao {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    background-color: var(--botoes);
+    border: none;
+    border-radius: 30px;
+    color: var(--background);
+}
+
+footer {
+    border-top: 1px solid #bebebe;
+    margin-top: 20px;
+    padding: 50px;
+    font-size: 18px;
+    text-align: center;
+
+}
+.icone {
+    width: 20px;
+    height: 20px;
+}
+footer button {
+     display: inline-flex;
+    margin-top: 10px;
+   align-items: center;
+   gap: 8px;
+   padding: 10px 16px;
+   border-radius: 30px;
+   border: none;
+    
+}
+
+@media screen and (max-width: 720px) {
+    .hamburger {
+        content: " ";
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 3px;
+        background-color: var(--background);
+        margin-top: -8px;
+        z-index: 10;
+    }
+
+    .menu-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--botoes);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .nav.active.menu-list {
+        clip-path: circle(1500px at 90% -15%);
+    }
+
+    menu-list a {
+        font-size: 24px;
+    }
+
+    .menu-list li:nth-child(1) a {
+        transition: 0.5s 0.2s;
+    }
+
+    .menu-list li:nth-child(2) a {
+        transition: 0.5s 0.4s;
+    }
+
+    .menu-list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    .nav.active .menu-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    .nav.active .menu-list a {
+        opacity: 1;
+    }
+
+    .nav.active .hamburger {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: var(--botoes);
+    }
+
+    .nav.active .hamburger::before {
+        transform: rotate(135deg);
+        top: 0;
+    }
+
+    .nav.active .hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    article {
+        display: inline-block;
+        padding: 4px;
+    }
+
+    .Detalhes-exibicao {
+        font-size: 15px;
+    }
+
+    .texto-container {
+        padding: 1px;
+        font-size: 15px;
+    }
+
+    .imagem-arte img {
+        width: 202px;
+        height: 113px;
+    }
+}

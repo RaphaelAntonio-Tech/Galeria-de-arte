@@ -1,0 +1,301 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background: #ffff;
+    --destaque: #3a8acb;
+    --icones: #001858;
+    --letras: #0000;
+    --secundaria: #a6a6a6;
+    --botoes: #a47754;
+    --fonte: "Montserrat", sans-serif;
+    --sombra:#00000085;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte);
+}
+
+.header {
+  padding-inline: 16px;
+}
+
+.nav {
+    display: flex;
+    max-width: 1280px;
+    height: 20px;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    margin-inline: auto;
+    padding: 25px 20px;
+    margin-top: 20px;
+    background-color: var(--destaque);
+
+}
+.fa-house{
+    color: var(--background);
+}
+
+.menu-list {
+    display: flex;
+    gap: 32px;
+    padding-bottom: 5px;
+    list-style: none;
+}
+
+.menu-list a {
+    font-weight: bold;
+    font-size: 18px;
+    padding-block: 16px;
+    text-decoration: none;
+    color: var(--background);
+}
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid var(--background);
+    cursor: pointer;
+}
+.hamburger::before,
+.hamburger::after {
+    content: " ";
+    width: 30px;
+    height: 3px;
+    background-color: var(--background);
+    margin-top: 5px;
+    display: block;
+    transition: 0.3s;
+    position: relative;
+}
+section h1{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+.contato-section h2{
+    margin-top: 10px;
+    text-align: center;
+}
+.contato-section p {
+    margin-left: 22%;
+    margin-right: 22%;
+    text-align: justify;
+    text-indent: 20px;
+}
+/* Aplica no corpo inteiro da página */
+aside {
+  font-family: sans-serif;    
+  display: flex;             
+  justify-content: center;    
+  align-items: center;        
+  height: 50vh;              
+  margin: 0;
+}
+
+/* Caixinha branca que parece uma janela */
+.login-container {
+    background-color: var(--icones);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;         /* Limite de largura */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Sombra suave */
+  overflow: hidden;
+}
+
+/* Cabeçalho com as bolinhas */
+.window-header {
+  background-color:var(--destaque);
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* As 3 bolinhas de cima */
+.dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green  { background-color: #28c840; }
+.orange { background-color: #ffb13b; }
+.red    { background-color: #ff5733; }
+
+/* Parte principal da caixinha */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 20px;
+  
+  flex-wrap: wrap;  
+}
+
+/* Ícone verde do check */
+.icon-check img {
+
+  margin-bottom: 15px;
+  max-width: 160px;
+}
+
+/* Bloco com os inputs */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Campos de digitação */
+.input-field {
+  padding: 10px 20px;
+  border: 2px solid var(--destaque);
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  outline: none;
+  color: #2e2e2e;
+}
+.Confirmar{
+    padding: 20px;
+    background-color: var(--destaque);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+   
+}
+footer {
+    margin-top: 20px;
+    padding: 50px;
+    font-size: 18px;
+    text-align: center;
+    border-top: 1px solid #bebebe;
+}
+
+.icone {
+    width: 20px;
+    height: 20px;
+}
+
+footer button{
+    display: inline-flex;
+    margin-top: 10px;
+   align-items: center;
+   gap: 8px;
+   padding: 10px 16px;
+   border-radius: 30px;
+   border: none;
+   
+}
+.linkedin{
+    background-color: var(--destaque);
+}
+.linkedin:hover {
+    border: 2px solid var(--destaque);
+    transition: 0.5s;
+    background-color: var(--background);
+}
+.github{
+    background-color: #bebebe;
+}
+.github:hover{
+    border: 2px solid #bebebe;
+    transition: 0.5s;
+    background-color: var(--background);
+}
+@media screen and (max-width:720px){
+    .hamburger {
+        content: " ";
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--background);
+        margin-top: -8px;
+        z-index: 10;
+    }
+    .menu-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--destaque);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-in-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    
+    }
+    
+    .menu-list a {
+        font-size: 24px;
+    }
+    
+    .menu-list li:nth-child(1) a {
+        transition: 0.5s 0.2s;
+    }
+    
+    .menu-list li:nth-child(2) a {
+        transition: 0.5s 0.4s;
+    }
+    
+    .menu-list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
+    .nav {
+        margin-top: 10px;
+    }
+    .nav.active .menu-list{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    .nav.active .menu-list a {
+        opacity: 1;
+    }
+
+    .nav.active .hamburger {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: var(--destaque);
+    }
+
+    .nav.active .hamburger::before {
+        transform: rotate(135deg);
+        top: 0;
+    }
+
+    .nav.active .hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    section h1{
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+ .contato-section h2{
+    margin-top: -30px;
+    text-align: center;
+}
+.segundo-paragrafo{
+   margin-bottom: 100px;
+}  
+ 
+}
