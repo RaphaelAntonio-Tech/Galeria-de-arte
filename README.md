@@ -13,11 +13,10 @@ O projeto busca unir arte e tecnologia em uma experiência simples, porém envol
 - JavaScript (elementos interativos básicos)
 - Font Awesome (ícones)
 
-  ## 🤳🏽 Layout Responsivo
-
-   A galeria se adapta a diferentes tamanhos de tela, proporcionando uma experiência fluida em celulares, tablets e computadores.
+## 🤳🏽 Layout Responsivo
+ A galeria se adapta a diferentes tamanhos de tela, proporcionando uma experiência fluida em celulares, tablets e computadores.
   
-  ## 🌐 Demonstração
+## 🌐 Demonstração
 
  Você pode visualizar o projeto online no link abaixo: 
  
